@@ -9,5 +9,7 @@ public interface Dusman {
 
 	void setHealth(int health);
 
-	void attack(GameChar character);
+	void attack(Player player);
+
+	void spawn();
 }

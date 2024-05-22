@@ -6,6 +6,7 @@ public class Player {
 
 	private int damage;
 	private int health;
+	private int maxHealth;
 	private int money;
 	private String name;
 	private String charName;
@@ -19,7 +20,7 @@ public class Player {
 
 		System.out.println("####################################");
 		System.out.println(
-				"1. Karakter : Samuray \t Hasar: 5 \t Sağlık: 21  \t Para: 5");
+				"1. Karakter : Samuray \t Hasar: 5 \t Sağlık: 21 \t Para: 5");
 		System.out.println(
 				"2. Karakter : Kovboy \t Hasar: 4 \t Sağlık: 14 \t Para: 30");
 		System.out.println(
@@ -44,6 +45,9 @@ public class Player {
 			initPlayer("Samuray", 5, 21, 5);
 			break;
 		}
+
+		// Maksimum sağlık puanını ayarlayalım
+		this.maxHealth = this.health;
 
 		System.out.println("Seçilen Karakter: " + getCharName());
 		System.out.println("Hasar: " + getDamage() + "\tSağlık: " + getHealth()
@@ -72,6 +76,10 @@ public class Player {
 
 	public void setHealth(int health) {
 		this.health = health;
+	}
+
+	public int getMaxHealth() { // Yeni eklenen metot
+		return maxHealth;
 	}
 
 	public int getMoney() {

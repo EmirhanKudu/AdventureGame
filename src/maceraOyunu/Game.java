@@ -17,5 +17,27 @@ public class Game {
 		System.out.println("Lütfen karakter seçiniz: ");
 		player.selectChar();
 
+		Location[] locations = { new Forest(player), new Cave(player),
+				new Swamp(player), new NormalLoc(player) };
+
+		while (true) {
+			System.out.println("Mekanlar:");
+			System.out.println("1. Orman");
+			System.out.println("2. Mağara");
+			System.out.println("3. Bataklık");
+			System.out.println("4. Normal Bölge");
+			System.out.print("Bir mekan seçin (çıkmak için 0): ");
+			int choice = input.nextInt();
+
+			if (choice == 0) {
+				System.out.println("Oyundan çıkılıyor...");
+				break;
+			} else if (choice > 0 && choice <= locations.length) {
+				locations[choice - 1].onLocation();
+			} else {
+				System.out.println("Geçersiz seçim!");
+			}
+		}
+		input.close();
 	}
 }

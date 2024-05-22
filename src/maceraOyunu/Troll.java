@@ -32,7 +32,12 @@ public class Troll implements Dusman {
 	}
 
 	@Override
-	public void attack(GameChar character) {
-		character.setHealth(character.getHealth() - this.damage);
+	public void attack(Player player) {
+		player.setHealth(player.getHealth() - this.damage);
+	}
+
+	@Override
+	public void spawn() {
+		System.out.println("Troll ortaya çıktı!");
 	}
 }

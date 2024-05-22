@@ -1,14 +1,14 @@
 package maceraOyunu;
 
-public class Kurt implements Dusman {
+public class Cadi implements Dusman {
 	private String name;
 	private int damage;
 	private int health;
 
-	public Kurt() {
-		this.name = "Kurt Adam";
-		this.damage = 4;
-		this.health = 15;
+	public Cadi() {
+		this.name = "Cadı";
+		this.damage = 5;
+		this.health = 8;
 	}
 
 	@Override
@@ -38,6 +38,6 @@ public class Kurt implements Dusman {
 
 	@Override
 	public void spawn() {
-		System.out.println("Kurt Adam ortaya çıktı!");
+		System.out.println("Cadı ortaya çıktı!");
 	}
 }
